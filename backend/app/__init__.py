@@ -1,11 +1,11 @@
 from flask import Flask
-from  config import AppConfig, init_db
+from .config import AppConfig, init_db
 
 def create_app():
   app = Flask(__name__)
   
   # Load configuration
-  app.config.from_import(AppConfig)
+  app.config.from_object(AppConfig)
   
   # Initialize database
   init_db(app)
