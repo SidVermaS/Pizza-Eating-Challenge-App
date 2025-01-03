@@ -8,6 +8,7 @@ class Orders(db.Model):
   user_id = db.Column(db.String(36), db.ForeignKey("users.id"))
   product_id = db.Column(db.String(36), db.ForeignKey("products.id"))
   quantity = db.Column(db.Integer, nullable = False, default = 0)
+  consumed_count = db.Column(db.Integer, nullable = False, default = 0)
   
   # Relationships
   consumedLogs = db.relationship("challenge.consumed_logs", backref="order.orders", lazy=True, cascade = "all, delete-orphan")

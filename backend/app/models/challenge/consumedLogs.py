@@ -9,6 +9,7 @@ class ConsumedLogs(db.Model):
     "schema":"challenge"
   }
   id = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4), nullable=False)
+  consumed_count = db.Column(db.Integer, nullable = False, default = 0)
   user_id = db.Column(db.String(36), db.ForeignKey("users.id"))
   product_id = db.Column(db.String(36), db.ForeignKey("products.id"))
   order_id = db.Column(db.String(36), db.ForeignKey("orders.id"))

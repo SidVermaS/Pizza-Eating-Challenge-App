@@ -1,0 +1,22 @@
+[
+  {
+    "id":"70f3ff5c-375c-492c-a248-a784f17ed2c7",
+"title":"Margherita Pizza Slice",
+"rate":30
+  },
+  {
+    "id":"091aa3b9-2b51-48de-b5ae-5c8540cb60a6",
+"title":"Farmhouse Pizza Slice",
+"rate":10
+  },
+  {
+    "id":"30fe051c-a081-487d-957a-3a08dadfca85",
+"title":"Greek Pizza Slice",
+"rate":40
+  },
+  {
+    "id":"85da3743-4309-47f9-a6c7-e3c6df2b9d64",
+"title":"Sicilian Pizza Slice",
+"rate":20
+  }
+]
