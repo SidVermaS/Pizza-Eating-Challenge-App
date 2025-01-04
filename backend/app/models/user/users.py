@@ -2,7 +2,7 @@ import uuid
 from sqlalchemy import Enum
 
 from ...config import db
-from ...consts import Gender
+from ...consts import GenderE
 
 class Users(db.Model):
   __tablename__ = "users"
@@ -10,7 +10,7 @@ class Users(db.Model):
   id = db.Column(db.String(36), primary_key = True, default = lambda: str(uuid.uuid4()), nullable = False)
   name = db.Column(db.String(100), nullable = False)
   age = db.Column(db.Integer, nullable = False)
-  gender = db.Column(Enum(Gender), nullable = False)
+  gender = db.Column(Enum(GenderE), nullable = False)
   coins = db.Column(db.Integer, nullable = False, default = 500)
   consumed_count = db.Column(db.Integer, nullable = False, default = 0)
   

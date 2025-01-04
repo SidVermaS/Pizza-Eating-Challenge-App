@@ -1,12 +1,12 @@
 from app.serializers.common import EnumField
-from app.consts.user import Gender
+from app.consts.user import GenderE
 from flask_restful import fields
 
 user_fields = {
   'id': fields.String,
 'name': fields.String,
 'age': fields.Integer,
-'gender': EnumField(Gender), 
+'gender': EnumField(GenderE), 
 'coins': fields.Integer,
 'consumed_count': fields.Integer,
 }
