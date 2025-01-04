@@ -2,21 +2,25 @@
   {
     "id":"70f3ff5c-375c-492c-a248-a784f17ed2c7",
 "title":"Margherita Pizza Slice",
+"imagePath":"https://media.istockphoto.com/id/1250174031/photo/slice-of-neapolitan-pizza-margherita-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=A5dcIkCj5-5GyteSuxFyR2aeIL5zbegqkcM72qJCOFo=",
 "rate":30
   },
   {
     "id":"091aa3b9-2b51-48de-b5ae-5c8540cb60a6",
 "title":"Farmhouse Pizza Slice",
+"imagePath":"https://foxeslovelemons.com/wp-content/uploads/2013/09/Rustic-Italian-Farmhouse-Pizza4.jpg",
 "rate":10
   },
   {
     "id":"30fe051c-a081-487d-957a-3a08dadfca85",
 "title":"Greek Pizza Slice",
+"imagePath":"https://www.themediterraneandish.com/wp-content/uploads/2024/03/Greek-Pizza-14.jpg",
 "rate":40
   },
   {
     "id":"85da3743-4309-47f9-a6c7-e3c6df2b9d64",
 "title":"Sicilian Pizza Slice",
+"imagePath":"https://www.mangiabedda.com/wp-content/uploads/2021/06/IMG_8173-2-1044x1536.jpg",
 "rate":20
   }
 ]

@@ -1,3 +1,3 @@
 from .db import init_db, db
-from .app import AppConfig
+from .db_config import DBConfig
 from .env import envVariables

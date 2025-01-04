@@ -4,10 +4,10 @@ from sqlalchemy import func
 from ...config import db
 
 class ConsumedLogs(db.Model):
-  __table__name = "consumed_logs"
-  __table__args = {
-    "schema":"challenge"
-  }
+  __tablename__ = "consumed_logs"
+  # __table_args__ = {
+  #   "schema":"challenge"
+  # }
   id = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4), nullable=False)
   consumed_count = db.Column(db.Integer, nullable = False, default = 0)
   user_id = db.Column(db.String(36), db.ForeignKey("users.id"))
