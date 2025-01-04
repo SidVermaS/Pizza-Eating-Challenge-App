@@ -19,10 +19,12 @@ def drop_all():
   with app.app_context():
     print("Dropping all tables")
     db.drop_all()
+    with db.engine.connect() as connection:
+      connection.execute("DROP TABLE IF EXISTS alembic_version")
     
 @app.cli.command("seed")
 def seed_all():
-  run_seed(app)
+  run_seed()
   
 if __name__ == "main":
   app.run()
