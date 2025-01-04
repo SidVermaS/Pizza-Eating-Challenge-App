@@ -18,5 +18,7 @@ class Users(db.Model):
   orders = db.relationship("Orders", backref="user", lazy=True, cascade="all, delete-orphan")
   consumedLogs = db.relationship("ConsumedLogs", backref="users", lazy=True, cascade = "all, delete-orphan")
   
+  # def to_dict(self):
+  #   return { 'id': self.id, 'name': self.name, 'age': self.age }
   def __repr__(self):
     return f"<Users {self.name}>"
