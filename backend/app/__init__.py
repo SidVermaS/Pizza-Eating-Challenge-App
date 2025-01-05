@@ -12,7 +12,7 @@ def create_app():
   init_db(app)  
   
   app.register_blueprint(v1_bp, url_prefix='/api/v1')
-  
+
   return app
 
 app = create_app()
