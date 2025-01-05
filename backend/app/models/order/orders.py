@@ -12,6 +12,6 @@ class Orders(db.Model):
   
   # Relationships
   consumedLogs = db.relationship("ConsumedLogs", backref="order", lazy=True, cascade = "all, delete-orphan")
-  
+  product = db.relationship('Products', backref='order', lazy=True,)
   def __repr__(self):
     return f"<Orders product_id: {self.product_id} user_id: {self.user_id} quantity: {self.quantity}>"

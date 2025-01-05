@@ -1,17 +1,19 @@
-from app.services.users_service import get_all_users, save_user, update_user, delete_user
+from app.services.users_service import get_users, save_user, update_user, delete_user
 from app.serializers.users import user_paginated_fields,user_fields
-from app.parsers.common import pagination_parser
+from app.parsers.common import get_pagination_parser
 from app.parsers.users import get_user_parser
 from app.consts.api import HttpStatus
 
-from flask_restful import abort, Resource,  marshal_with
+from flask_restful import  Resource,  marshal_with
 from werkzeug.exceptions import BadRequest
 
 class UsersResource(Resource):  
   @marshal_with(user_paginated_fields)
   def get(self):  
+    
+    pagination_parser=get_pagination_parser()
     args = pagination_parser.parse_args()    
-    users = get_all_users(page = args['page'], per_page = args['per_page'])    
+    users = get_users(page = args['page'], per_page = args['per_page'])    
     return users  
   
   @marshal_with(user_fields)

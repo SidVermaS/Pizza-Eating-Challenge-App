@@ -15,5 +15,7 @@ class ConsumedLogs(db.Model):
   order_id = db.Column(db.String(36), db.ForeignKey("orders.id"))
   created_at = db.Column(db.DateTime, default = func.now())  
   
+  product = db.relationship('Products', backref = 'consumed_logs', lazy = True)
+  
   def __repr__(self):
     return f"<ConsumedLogs user_id: {self.user_id} order_id: {self.order_id}>"

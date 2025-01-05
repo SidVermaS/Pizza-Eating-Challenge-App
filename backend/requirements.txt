@@ -8,9 +8,9 @@ python-dotenv==1.0.0      # Load environment variables from .env
 marshmallow==3.20.1       # For data validation and serialization
 marshmallow-sqlalchemy==0.28.0 # Integration of Marshmallow with SQLAlchemy
 
-# For real-time features (if using WebSocket):
-flask-socketio==5.3.2     # WebSocket support for Flask
-eventlet==0.33.3          # Required for Flask-SocketIO
+# # For real-time features (if using WebSocket):
+# flask-socketio==5.3.2     # WebSocket support for Flask
+# eventlet==0.33.3          # Required for Flask-SocketIO
 
 # Deployment and security
 gunicorn==20.1.0          # Production WSGI server for deploying the app

@@ -3,7 +3,7 @@ from app.config import db
 
 from werkzeug.exceptions import BadRequest, NotFound
 
-def get_all_users(page, per_page):
+def get_users(page, per_page):
   users=Users.query.paginate(page = page, per_page = per_page, error_out = False)
   return {
     'total': users.total,
