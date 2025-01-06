@@ -1,6 +1,6 @@
 
 from flask import Flask
-
+from flask_cors import CORS
 from app.config import DBConfig, db, init_db, setup
 from app.api.v1 import v1_bp
 def create_app():
@@ -18,5 +18,13 @@ def create_app():
 app = create_app()
 
 setup(app, db)
+CORS(app)
+
+@app.after_request
+def add_headers(response):
+    response.headers['Content-Type'] = 'application/json'
+    response.headers['Accept'] = 'application/json'
+    return response
+
 if __name__ == "main":
   app.run()

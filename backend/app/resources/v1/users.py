@@ -14,7 +14,7 @@ class UsersResource(Resource):
     pagination_parser=get_pagination_parser()
     args = pagination_parser.parse_args()    
     users = get_users(page = args['page'], per_page = args['per_page'])    
-    return users  
+    return users, HttpStatus.OK.value
   
   @marshal_with(user_fields)
   def post(self):
