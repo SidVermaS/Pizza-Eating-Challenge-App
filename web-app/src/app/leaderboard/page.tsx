@@ -22,7 +22,11 @@ const LeaderboardPage = () => {
       } catch (_error) {}
     });
   };
-  return <div className="flex min-h-screen items-center justify-center bg-primary-light"></div>;
+  return (
+    <>
+     
+    </>
+  );
 };
 
 export default LeaderboardPage;

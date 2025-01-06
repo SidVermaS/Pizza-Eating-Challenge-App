@@ -2,11 +2,19 @@
 import React from 'react';
 import { fetchUsers } from '@/services/user/users';
 import { GetServerSideProps } from 'next';
-import { PaginationI } from '@/types/services';
+import Table from '@/components/Table';
+import { UserI } from '@/types/users';
+import { TablePaginationI } from '@/types/common';
 
 const ManagePlayersPage = () => {
-  const [users, setUsers] = React.useState([]);
-  const [pagination, setPagination] = React.useState<PaginationI>({ page: 1, per_page: 15 });
+  const [users, setUsers] = React.useState<UserI[]>([]);
+  const [pagination, setPagination] = React.useState<TablePaginationI>({
+    current_page: 0,
+    pages: 0,
+    total: 0,
+    page: 1,
+    per_page: 15,
+  });
   const [isPending, startTransition] = React.useTransition();
   React.useEffect(() => {
     fetchData();
@@ -17,12 +25,19 @@ const ManagePlayersPage = () => {
         const result = await fetchUsers(pagination);
         setUsers(result.data);
         if (result?.data?.length) {
+          setPagination(result);
           setUsers(result.data);
         }
       } catch (_error) {}
     });
   };
-  return <div className="flex min-h-screen items-center justify-center bg-primary-light"></div>;
+  return (
+    <>
+      <Table headings={['Name', 'Age','Gender','Coins','']}>
+        {}
+      </Table>
+    </>
+  );
 };
 
 export default ManagePlayersPage;
