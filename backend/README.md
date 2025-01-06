@@ -1,3 +1,9 @@
+# Backend Setup
+
+### Change path
+```bash
+ cd backend
+```
 ### Flask Migration
 ```bash
 flask db init --directory app/migrations
@@ -16,4 +22,23 @@ flask seed
 ```bash
 flask drop_all
 ```
+### Flask Run Project
+```bash
+flask run
+```
 
+# Frontend Setup
+### Change path
+```bash
+  cd web_app
+```
+
+### Install packages
+```bash
+  npm i
+```
+
+### Run on development
+```bash
+  npm run dev
+```
