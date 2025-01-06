@@ -1,5 +1,5 @@
 import uuid
-from ...config import db
+from ..config import db
 
 class Orders(db.Model):
   __tablename__ = "orders"

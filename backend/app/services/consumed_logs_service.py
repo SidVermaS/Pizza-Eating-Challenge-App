@@ -1,6 +1,6 @@
-from app.models.challenge.consumedLogs import ConsumedLogs
-from app.models.product.products import Products
-from app.models.order.orders import Orders
+from backend.app.models.consumedLogs import ConsumedLogs
+from backend.app.models.products import Products
+from backend.app.models.orders import Orders
 
 
 def get_consumed_logs(user_id, page, per_page):

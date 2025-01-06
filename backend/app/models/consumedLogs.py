@@ -1,7 +1,7 @@
 import uuid
 from sqlalchemy import func
 
-from ...config import db
+from ..config import db
 
 class ConsumedLogs(db.Model):
   __tablename__ = "consumed_logs"

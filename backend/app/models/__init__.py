@@ -1,7 +1,7 @@
-from .user.users import Users
+from .users import Users
 
-from .product.products import Products
+from .products import Products
 
-from .order.orders import Orders
+from .orders import Orders
 
-from .challenge.consumedLogs import ConsumedLogs
+from .consumedLogs import ConsumedLogs

@@ -1,6 +1,6 @@
 import uuid
 
-from ...config import db
+from ..config import db
 
 class Products(db.Model):
   __tablename__ = "products"

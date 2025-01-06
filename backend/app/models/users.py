@@ -1,8 +1,8 @@
 import uuid
 from sqlalchemy import Enum
 
-from ...config import db
-from ...consts import GenderE
+from ..config import db
+from ..consts import GenderE
 
 class Users(db.Model):
   __tablename__ = "users"
