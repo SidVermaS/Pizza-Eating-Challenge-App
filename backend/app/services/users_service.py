@@ -52,3 +52,16 @@ def delete_user(id):
         raise NotFound(description="User not found")
     db.session.delete(user)
     db.session.commit()
+
+
+def update_rank():
+    users = Users.query.order_by(Users.consumed_count.desc()).all()
+    current_rank = 0
+    previous_consumed_count = None
+
+    for index, user in enumerate(users):
+        if user.consumed_count != previous_consumed_count:
+            current_rank = index + 1
+        user.rank = current_rank
+        previous_consumed_count = user.consumed_count
+    db.session.commit()

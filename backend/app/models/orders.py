@@ -1,5 +1,7 @@
+from app.config import db
+
 import uuid
-from ..config import db
+from sqlalchemy import func
 
 
 class Orders(db.Model):
@@ -15,6 +17,7 @@ class Orders(db.Model):
     product_id = db.Column(db.String(36), db.ForeignKey("products.id"))
     quantity = db.Column(db.Integer, nullable=False, default=0)
     consumed_count = db.Column(db.Integer, nullable=False, default=0)
+    created_at = db.Column(db.DateTime, default=func.now())
 
     # Relationships
     consumedLogs = db.relationship(
@@ -22,6 +25,11 @@ class Orders(db.Model):
     )
     product = db.relationship(
         "Products",
+        backref="order",
+        lazy=True,
+    )
+    user = db.relationship(
+        "Users",
         backref="order",
         lazy=True,
     )

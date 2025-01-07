@@ -1,7 +1,10 @@
 from app.resources.v1.users import UserResourceById, UsersResource
 from app.resources.v1.products import ProductsResource
 from app.resources.v1.orders import OrdersResource, OrdersByUserIdResource
-from app.resources.v1.consumed_logs import ConsumedLogsByUserIdResource
+from app.resources.v1.consumed_logs import (
+    ConsumedLogsByUserIdResource,
+    ConsumedLogsResource,
+)
 
 
 def initialize_routes(api):
@@ -13,6 +16,7 @@ def initialize_routes(api):
 
     api.add_resource(ProductsResource, "/products")
 
+    api.add_resource(ConsumedLogsResource, "/consumed-logs")
     api.add_resource(
         ConsumedLogsByUserIdResource, "/consumed-logs/users/<string:user_id>"
     )

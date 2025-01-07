@@ -52,7 +52,8 @@
     "order_id": "c385fafc-f541-41e6-83f2-f1723bc33a71",
     "consumed_count": 1,
     "created_at": "2025-01-01T15:05:00Z"
-  },{
+  },
+  {
     "id": "bde33089-53f1-4cdc-b118-aea8d854d061",
     "user_id": "b713e924-f8a4-4847-939b-5390bd1e7ede",
     "product_id": "85da3743-4309-47f9-a6c7-e3c6df2b9d64",

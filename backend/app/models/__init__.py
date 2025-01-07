@@ -4,4 +4,4 @@ from .products import Products
 
 from .orders import Orders
 
-from .consumedLogs import ConsumedLogs
+from .consumed_logs import ConsumedLogs

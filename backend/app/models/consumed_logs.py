@@ -1,7 +1,6 @@
+from app.config import db
 import uuid
 from sqlalchemy import func
-
-from ..config import db
 
 
 class ConsumedLogs(db.Model):
@@ -19,6 +18,8 @@ class ConsumedLogs(db.Model):
     created_at = db.Column(db.DateTime, default=func.now())
 
     product = db.relationship("Products", backref="consumed_logs", lazy=True)
+    order = db.relationship("Orders", backref="consumed_logs", lazy=True)
+    user = db.relationship("Uusers", backref="consumed_logs", lazy=True)
 
     def __repr__(self):
         return f"<ConsumedLogs user_id: {self.user_id} order_id: {self.order_id}>"

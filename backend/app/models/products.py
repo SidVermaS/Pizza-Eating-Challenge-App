@@ -1,6 +1,5 @@
+from app.config import db
 import uuid
-
-from ..config import db
 
 
 class Products(db.Model):
