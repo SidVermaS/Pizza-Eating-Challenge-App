@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { fetchUsers } from '@/services/user/users';
-import { GetServerSideProps } from 'next';
 import Table from '@/components/Table';
 import { UserI } from '@/types/users';
 import { TablePaginationI } from '@/types/common';

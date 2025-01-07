@@ -1,4 +1,5 @@
 import { GenderI } from '@/consts/users';
+import { PaginationI } from './common';
 
 export type UserI = {
   id: string;
@@ -7,4 +8,8 @@ export type UserI = {
   gender: GenderI;
   coins: number;
   consumed_count: number;
+  rank: number;
+};
+export type FetchUsersParamsI = PaginationI & {
+  sort_by?: 'rank';
 };

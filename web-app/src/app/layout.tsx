@@ -25,7 +25,7 @@ const RootLayout = ({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen items-center justify-center bg-primary-light`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-primary-light py-6 sm:flex sm:flex-col sm:items-center sm:justify-center sm:py-0`}
       >
         {children}
       </body>

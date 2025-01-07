@@ -1,6 +1,5 @@
-import { StrVoidFnI } from '@/types/common';
+import { StrClassI, } from '@/types/common';
 
 export type TablePropsI = {
-  headings: string[];
-  
+  headings: StrClassI[];
 };

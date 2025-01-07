@@ -13,3 +13,7 @@ export type TablePaginationI = PaginationI & {
 export type TablePaginationDataI<T> = TablePaginationI & {
   data: T;
 };
+export type StrClassI ={
+  text:string;
+  className: string
+}
