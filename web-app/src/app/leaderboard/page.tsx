@@ -8,6 +8,7 @@ import TableRow from '@/components/TableRow';
 import TableCell from '@/components/TableCell';
 import { GenderE } from '@/consts/users';
 import { headings } from './useLeaderboardPage';
+import Title from '@/components/Title';
 
 const LeaderboardPage = () => {
   const [users, setUsers] = React.useState<UserI[]>([]);
@@ -36,7 +37,7 @@ const LeaderboardPage = () => {
   };
   return (
     <>
-      <div className="mb-6 text-center text-2xl sm:text-3xl">Champions 🏆</div>
+      <Title text="Champions 🏆" />
       <Table headings={headings}>
         {users.map((user) => (
           <TableRow key={user.id}>
@@ -44,7 +45,7 @@ const LeaderboardPage = () => {
             <TableCell className="px-3" text={user.name} />
             <TableCell className="px-3" align="right" text={user.age.toFixed()} />
             <TableCell className="px-3" text={GenderE[user.gender]} />
-            <TableCell className="px-3" align="right" text={user.consumed_count.toString()} />
+            <TableCell className="px-3" align="right" text={`${user.consumed_count} 🍕`} />
           </TableRow>
         ))}
       </Table>

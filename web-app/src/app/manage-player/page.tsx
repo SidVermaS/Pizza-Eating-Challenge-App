@@ -30,13 +30,7 @@ const ManagePlayersPage = () => {
       } catch (_error) {}
     });
   };
-  return (
-    <>
-      <Table headings={['Name', 'Age','Gender','Coins','']}>
-        {}
-      </Table>
-    </>
-  );
+  return <></>;
 };
 
 export default ManagePlayersPage;

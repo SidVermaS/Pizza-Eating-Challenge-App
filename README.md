@@ -3,6 +3,7 @@
 ### Change path
 ```bash
  cd backend
+ source venv/bin/activate
 ```
 ### Flask Migration
 ```bash
