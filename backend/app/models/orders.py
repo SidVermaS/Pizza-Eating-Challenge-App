@@ -20,17 +20,17 @@ class Orders(db.Model):
     created_at = db.Column(db.DateTime, default=func.now())
 
     # Relationships
-    consumedLogs = db.relationship(
-        "ConsumedLogs", backref="order", lazy=True, cascade="all, delete-orphan"
+    consumed_log = db.relationship(
+        "ConsumedLogs", back_populates="order", lazy=True, cascade="all, delete-orphan"
     )
     product = db.relationship(
         "Products",
-        backref="order",
+        back_populates="order",
         lazy=True,
     )
     user = db.relationship(
         "Users",
-        backref="order",
+        back_populates="order",
         lazy=True,
     )
 

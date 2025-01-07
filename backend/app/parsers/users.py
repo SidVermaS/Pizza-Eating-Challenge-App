@@ -1,6 +1,13 @@
 from app.types.users import gender_type
 from app.consts.user import GenderE
+from app.parsers.common import get_pagination_parser
 from flask_restful import reqparse
+
+
+def get_users_parser():
+    users_parser = get_pagination_parser()
+    users_parser.add_argument("sort_by", type=str, required=False, location="args")
+    return users_parser
 
 
 def get_user_parser(required=True):

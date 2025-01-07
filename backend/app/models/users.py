@@ -4,6 +4,7 @@ from app.consts import GenderE
 import uuid
 from sqlalchemy import Enum
 
+
 class Users(db.Model):
     __tablename__ = "users"
     # __table_args__ = {"schema":"user"}
@@ -21,11 +22,11 @@ class Users(db.Model):
     rank = db.Column(db.Integer, nullable=False)
 
     # Relationships
-    orders = db.relationship(
-        "Orders", backref="user", lazy=True, cascade="all, delete-orphan"
+    order = db.relationship(
+        "Orders", back_populates="user", lazy=True, cascade="all, delete-orphan"
     )
-    consumedLogs = db.relationship(
-        "ConsumedLogs", backref="users", lazy=True, cascade="all, delete-orphan"
+    consumed_log = db.relationship(
+        "ConsumedLogs", back_populates="user", lazy=True, cascade="all, delete-orphan"
     )
 
     # def to_dict(self):

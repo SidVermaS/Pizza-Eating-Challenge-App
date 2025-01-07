@@ -13,11 +13,14 @@ class Products(db.Model):
     rate = db.Column(db.Integer, nullable=False)
 
     # Relationships
-    orders = db.relationship(
-        "Orders", backref="products", lazy=True, cascade="all, delete-orphan"
+    order = db.relationship(
+        "Orders", back_populates="product", lazy=True, cascade="all, delete-orphan"
     )
-    consumedLogs = db.relationship(
-        "ConsumedLogs", backref="products", lazy=True, cascade="all, delete-orphan"
+    consumed_log = db.relationship(
+        "ConsumedLogs",
+        back_populates="product",
+        lazy=True,
+        cascade="all, delete-orphan",
     )
 
     def __repr__(self):
