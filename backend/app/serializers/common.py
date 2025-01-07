@@ -3,6 +3,7 @@ from flask_restful import fields
 # app/fields.py
 from flask_restful import fields
 
+
 class EnumField(fields.Raw):
     def __init__(self, enum_type, *args, **kwargs):
         self.enum_type = enum_type

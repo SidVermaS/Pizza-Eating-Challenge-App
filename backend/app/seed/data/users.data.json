@@ -5,7 +5,8 @@
     "age": 24,
     "gender": "MALE",
     "coins": 410,
-    "consumed_count": 2
+    "consumed_count": 2,
+    "rank":3
   },
   {
     "id": "deaceba4-0544-4ff4-8eeb-161f84d2e419",
@@ -13,7 +14,8 @@
     "age": 35,
     "gender": "MALE",
     "coins": 480,
-    "consumed_count": 1
+    "consumed_count": 1,
+    "rank":4
   },
   {
     "id": "2f75df10-9ef2-4c92-84f0-93c830a5928b",
@@ -21,7 +23,8 @@
     "age": 28,
     "gender": "FEMALE",
     "coins": 300,
-    "consumed_count": 3
+    "consumed_count": 3,
+    "rank":2
   },
   {
     "id": "b713e924-f8a4-4847-939b-5390bd1e7ede",
@@ -29,7 +32,8 @@
     "age": 21,
     "gender": "FEMALE",
     "coins": 360,
-    "consumed_count": 4
+    "consumed_count": 4,
+    "rank":1
   },
   {
     "id": "f91c13d5-f2f5-476e-a3fe-759138ad9d26",
@@ -37,6 +41,7 @@
     "age": 33,
     "gender": "MALE",
     "coins": 380,
-    "consumed_count": 2
+    "consumed_count": 2,
+    "rank":3
   }
 ]
