@@ -13,7 +13,7 @@ class UsersResource(Resource):
 
         users_parser = get_users_parser()
         args = users_parser.parse_args()
-        users = get_users(page=args["page"], per_page=args["per_page"])
+        users = get_users(page=args["page"], per_page=args["per_page"], sort_by=args['sort_by'])
         return users, HttpStatus.OK.value
 
     @marshal_with(user_fields)

@@ -8,6 +8,7 @@ user_fields = {
     "age": fields.Integer,
     "gender": EnumField(GenderE),
     "coins": fields.Integer,
+    "rank": fields.Integer,
     "consumed_count": fields.Integer,
 }
 user_paginated_fields = {

@@ -7,7 +7,7 @@ from werkzeug.exceptions import BadRequest, NotFound
 def get_users(page, per_page, sort_by=None):
     query = Users.query
     if sort_by:
-        query = query.order_by(getattr(Users, "rank").desc())
+        query = query.order_by(getattr(Users, "rank").asc())
 
     users = query.paginate(page=page, per_page=per_page, error_out=False)
     return {
